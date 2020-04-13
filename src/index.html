@@ -6,10 +6,21 @@
     <title>Journal</title>
   </head>
   <body>
-    Hi there
-    
-    </form>
-    <ul id="solution"></ul>
-    
+    <div class="container">
+      <h3>Journal Editor</h3>
+      <form id="newEntry">
+        <label for="title">Title</label><br>
+        <input type="text" class="form-group" id="title"><br>
+        <label for="body">Journal Entry</label><br>
+        <input type="text" class="form-group" id="body"><br>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+      <div id="entryView"></div>
+      <div id="entryDetails">
+        <ul id="teaser"></ul>
+        <ul id="wordCount"></ul>
+        <ul id="letterCounts"></ul>
+      </div>
+    </div>
   </body>
 </html>

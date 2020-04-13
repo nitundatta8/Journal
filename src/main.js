@@ -2,10 +2,15 @@ import { Entry } from './journal.js';
 import './styles.css';
 
 $(document).ready(function() {
-  var entry = new Entry("Rugs", "Rugs can be made of wool, silk, cotton, jute, or synthetic fibers.");
-  var value = entry.countWords(); 
-  console.log(value);
-  var letters = entry.CountLetters();
-  console.log(letters);
+  $("#newEntry").submit(function(event){
+    event.preventDefault();
+    var title = $("#title").val(); 
+    var body = $("#body").val();
+    var entry = new Entry(title, body);
+    var words = entry.countWords(); 
+    $("#wordCount").text("Total words: " + words);
+    var letters = entry.CountLetters();
+    $("#letterCounts").text("Total vowels and consonants: " + letters);
+  }); 
 });
 

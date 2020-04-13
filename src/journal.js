@@ -9,6 +9,18 @@ Entry.prototype.countWords = function(){
   return strArray.length;
 };
 
+Entry.prototype.getTeaser = function () {
+  var str = this.body;
+  var strArray = str.split(" ");
+  var i=0;
+  var teaser = "";
+  for (strArray[i]; i<8; i++) {
+    teaser += (strArray[i] + " ");
+  }
+  console.log(teaser)
+  return teaser;
+};
+
 Entry.prototype.CountLetters = function() {
   var vowels = ["a", "e", "i", "o", "u"];
   var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];

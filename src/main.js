@@ -11,6 +11,8 @@ $(document).ready(function() {
     $("#wordCount").text("Total words: " + words);
     var letters = entry.CountLetters();
     $("#letterCounts").text("Total vowels and consonants: " + letters);
+    var teaserText = entry.getTeaser();
+    $("#teaser").text(teaserText);
   }); 
 });
 
